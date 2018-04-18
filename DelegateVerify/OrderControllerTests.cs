@@ -4,7 +4,7 @@ using NSubstitute;
 namespace DelegateVerify
 {
     [TestClass]
-    public class OrderConrollertTests
+    public class OrderControllerTests
     {
         [TestMethod]
         public void exist_order_should_update()
