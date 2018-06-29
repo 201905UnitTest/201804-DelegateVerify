@@ -26,5 +26,14 @@ namespace DelegateVerify
 
             orderController.Save(new Order {Id = 91, Amount = 100});
         }
+
+        [TestMethod]
+        public void test_delete_adult_orders()
+        {
+            //TODO
+            var model = Substitute.For<IOrderModel>();
+            var orderController = new OrderController(model);
+            orderController.DeleteAdultOrders();
+        }
     }
 }

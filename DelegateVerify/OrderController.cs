@@ -9,7 +9,7 @@ namespace DelegateVerify
         public OrderController(IOrderModel orderModel)
         {
             _orderModel = orderModel;
-        } 
+        }
 
         public void Save(Order order)
         {
@@ -24,6 +24,11 @@ namespace DelegateVerify
         private void InsertMessage(Order order)
         {
             Console.WriteLine($"insert order id:{order.Id} with {order.Amount} successfully!");
+        }
+
+        public void DeleteAdultOrders()
+        {
+            _orderModel.Delete(o => o.Customer.Age >= 18);
         }
     }
 }
