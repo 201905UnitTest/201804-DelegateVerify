@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NSubstitute;
+﻿using NSubstitute;
+using NUnit.Framework;
 
 namespace DelegateVerify
 {
-    [TestClass]
+    [TestFixture]
     public class OrderControllerTests
     {
-        [TestMethod]
+        [Test]
         public void exist_order_should_update()
         {
             //TODO
@@ -17,7 +17,7 @@ namespace DelegateVerify
         }
 
 
-        [TestMethod]
+        [Test]
         public void no_exist_order_should_insert()
         {
             //TODO
@@ -27,7 +27,7 @@ namespace DelegateVerify
             orderController.Save(new Order {Id = 91, Amount = 100});
         }
 
-        [TestMethod]
+        [Test]
         public void test_delete_adult_orders()
         {
             //TODO
